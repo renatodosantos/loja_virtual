@@ -1,16 +1,26 @@
 # encoding: utf-8
 class Livro
-	attr_accessor :preco
+	attr_accessor :valor
+	attr_reader :categoria,:isbn
 
-	def initialize(autor, isbn = "1", numero_de_paginas,preco)
+	def initialize(autor, isbn = "1", numero_de_paginas,valor,categoria)
 		@autor = autor
 		@isbn = isbn
 		@numero_de_paginas = numero_de_paginas
-		@preco = preco
+		@valor = valor
+		@categoria = categoria
 	end
 
 	def to_s
-		"Autor: #{@autor}, Isbn: #{@isbn}, Páginas: #{@numero_de_paginas}, Preco: #{@preco}"
+		"Autor: #{@autor}, Isbn: #{@isbn}, Páginas: #{@numero_de_paginas}, Valor: #{@valor}, Categoria: #{@categoria}"
+	end
+
+	def hash
+		@isbn.hash
+	end
+
+	def eql?(outro_livro)
+		@isbn == outro_livro.isbn
 	end
 
 end
