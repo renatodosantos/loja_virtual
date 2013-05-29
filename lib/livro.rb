@@ -1,7 +1,7 @@
 # encoding: utf-8
 class Livro
 	attr_accessor :valor
-	attr_reader :categoria,:isbn
+	attr_reader :categoria,:isbn,:autor
 
 	def initialize(autor, isbn = "1", numero_de_paginas,valor,categoria)
 		@autor = autor
