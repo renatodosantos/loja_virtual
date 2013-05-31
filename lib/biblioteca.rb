@@ -11,12 +11,13 @@ class Biblioteca
 	end
 
 	def livros
-		livros.values.flatten
+		@livros.values.flatten
 	end
 
-	def livros_por_categoria(categoria)
-		@livros[categoria].each do |livro| 
-			yield livro
+	def livros_por_categoria(categoria, bloco_com_p, bloco_com_puts)
+		@livros[categoria].each do |livro|
+			bloco_com_p.call livro
+			bloco_com_puts.call livro
 		end
 	end
 
