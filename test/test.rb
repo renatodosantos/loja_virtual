@@ -5,11 +5,10 @@ require "U:/loja_virtual/lib/relatorio"
 require "U:/loja_virtual/lib/banco_de_arquivos"
 
 
-teste_e_design = Livro.new "TDD","Mauricio Aniche", "123454",247, 69.9, :testes
-web_design_responsivo = Livro.new "Design Responsivo","Tárcio Zemel", "452565",189, 69.9, :web_design
-
 biblioteca = Biblioteca.new
 
-biblioteca.adiciona teste_e_design 
-biblioteca.adiciona web_design_responsivo
+biblioteca.adiciona Livro.new "TDD","Mauricio Aniche", "123454",247, 69.9, :testes
+biblioteca.adiciona Livro.new "Design Responsivo","Tárcio Zemel", "452565",189, 69.9, :web
+biblioteca.adiciona Livro.new "Web com JSF e JPA", "Gilliard Cordeiro", "543232", 270, 69.9, :web
 
+biblioteca.livros_por_categoria :testes
