@@ -14,7 +14,7 @@ class Biblioteca
 	end
 
 	def livros_por_categoria(categoria)
-		livros.select { |livro| livro.categoria = categoria}
+		livros.select { |livro| livro.categoria == categoria}
 	end
 
 

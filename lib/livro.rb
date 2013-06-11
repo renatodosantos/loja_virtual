@@ -1,7 +1,6 @@
 # encoding: utf-8
-class Livro
-	attr_accessor :valor
-	attr_reader :categoria,:isbn,:autor, :titulo
+class Livro < Midia
+	attr_reader :categoria, :autor
 
 	def initialize(titulo, autor, isbn = "1", numero_de_paginas,valor,categoria)
 		@titulo = titulo
@@ -14,14 +13,6 @@ class Livro
 
 	def to_s
 		"Autor: #{@autor}, Isbn: #{@isbn}, Páginas: #{@numero_de_paginas}, Valor: #{@valor}, Categoria: #{@categoria}"
-	end
-
-	def hash
-		@isbn.hash
-	end
-
-	def eql?(outro_livro)
-		@isbn == outro_livro.isbn
 	end
 
 end

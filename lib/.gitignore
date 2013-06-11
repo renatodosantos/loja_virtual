@@ -1,0 +1,8 @@
+# Logs and databases #
+######################
+*.yml
+
+
+# OS generated files #
+######################
+test.rb
