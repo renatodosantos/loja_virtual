@@ -9,6 +9,7 @@ class Livro < Midia
 		@numero_de_paginas = numero_de_paginas
 		@valor = valor
 		@categoria = categoria
+		@desconto = 0.15
 	end
 
 	def to_s
