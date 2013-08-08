@@ -6,6 +6,6 @@ class CD < Midia
 		@titulo = titulo
 		@valor = valor
 		@categoria = categoria
-		@desconto = 0.3
+		@desconto = 0.5
 	end
 end
