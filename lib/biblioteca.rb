@@ -10,30 +10,30 @@ def initialize
 end
 
 
-def adiciona(livro)
-	salva livro do
-		livros << livro
-	end
+def adiciona(midia)
+	salva midia do
+		midias << midia
+	end if midia.kind_of? Midia
 end
 
-def livros_por_categoria(categoria)
-	livros.select { |livro| livro.categoria == categoria}
+def midias_por_categoria(categoria)
+	midias.select { |midia| midia.categoria == categoria}
 end
 
-def livros
-	@livros ||= @banco_de_arquivos.carrega
+def midias
+	@midia ||= @banco_de_arquivos.carrega
 end
 
 # método each que possibilita que os outros métodos
 # do módulo Enumerable funcionem em uma instância de Biblioteca
 def each
-	livros.each { |livro| yield livro }
+	midias.each { |midia| yield midia }
 end
 
 private
 
-def salva (livro)
-	@banco_de_arquivos.salva livro
+def salva (midia)
+	@banco_de_arquivos.salva midia
 	yield
 end
 

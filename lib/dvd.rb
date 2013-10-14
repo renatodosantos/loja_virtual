@@ -1,5 +1,11 @@
 # encoding: utf-8
+require_relative "formatador_moeda"
+
 class DVD < Midia
+
+	attr_reader :titulo
+
+  formata_moeda :valor_com_desconto, :valor
 
   def initialize(titulo, valor, categoria)
   	super()

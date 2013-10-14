@@ -7,11 +7,34 @@ require "U:/loja_virtual/lib/biblioteca"
 require "U:/loja_virtual/lib/relatorio"
 require "U:/loja_virtual/lib/banco_de_arquivos"
 
-teste_e_design = Livro.new "TDD", "Mauricio Aniche", "123454", 247, 100, :testes
-p teste_e_design.valor_com_desconto 
+class Revista
 
-windows = DVD.new "Windows 7 for Dummies", 100, :sistemas_operacionais
-p windows.valor_com_desconto 
+	attr_reader :titulo
 
-windows = CD.new "Windows 95", 100, :sistemas_operacionais 
-p windows.valor_com_desconto # => 239.6
+	def initialize(titulo)	
+		@titulo = titulo
+	end
+end
+
+#biblioteca = Biblioteca.new
+#mundo_j = Revista.new "MundoJ"
+
+#biblioteca.adiciona mundo_j
+
+#biblioteca.each do |qualquer_objeto|
+#	p qualquer_objeto.titulo # => MundoJ
+#end
+
+
+windows = DVD.new "Windows 7 for Dummies", 98.9, :sistemas_operacionais
+#linux = DVD.new "Linux for Dummies", 13.9, :sistemas_operacionais
+#
+#def windows.desconto_formatado
+#	"Desconto: #{@desconto * 100}%"
+#end
+#
+#p windows.desconto_formatado
+#p linux.desconto_formatado
+
+p windows.valor_formatado
+p windows.valor_com_desconto_formatado
