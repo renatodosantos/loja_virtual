@@ -38,3 +38,4 @@ windows = DVD.new "Windows 7 for Dummies", 98.9, :sistemas_operacionais
 
 p windows.valor_formatado
 p windows.valor_com_desconto_formatado
+p windows.metodo_de_instancia

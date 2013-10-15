@@ -5,7 +5,7 @@ class DVD < Midia
 
 	attr_reader :titulo
 
-  extend FormatadorMoeda
+  include FormatadorMoeda
 
   formata_moeda :valor_com_desconto, :valor
 
